@@ -20,4 +20,4 @@ addons:
     packages:
     - "pylint"
 script:
-  - "pylint --rcfile=pylintrc ./"
+  - "pylint --rcfile=pylintrc infrastructure/dns-sync/"
