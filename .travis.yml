@@ -15,9 +15,7 @@
 language: python
 python:
   - "2.7"
-addons:
-  apt:
-    packages:
-    - "pylint"
+before_install:
+  - "pip install --upgrade -q pylint"
 script:
   - "pylint --rcfile=pylintrc infrastructure/dns-sync/"
