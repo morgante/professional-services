@@ -116,7 +116,7 @@ class StackdriverExporter(BaseExporter):
             dict: The Stackdriver Logging entry as JSON.
         """
         return {
-            'timestamp': __convert_timestamp(record),
+            'timestamp': self.__convert_timestamp(record),
             'insertId': record['etag'],
             'jsonPayload': {
                 'requestMetadata': {'callerIp': record.get('ipAddress')},
